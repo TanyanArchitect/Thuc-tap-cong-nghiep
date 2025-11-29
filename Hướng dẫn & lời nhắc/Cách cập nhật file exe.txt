@@ -1,0 +1,13 @@
+Các bước thực hiện:
+
+1. Mở PowerShell (bình thường, không cần Admin).
+
+2. Di chuyển đến thư mục dự án:
+cd C:\Users\tanya\Downloads\network_scanner
+
+3. (Tùy chọn nhưng nên làm): Xóa 2 thư mục build và dist cũ đi để đảm bảo xây dựng lại từ đầu, không bị lỗi cache.
+rmdir build -Recurse -Force
+rmdir dist -Recurse -Force
+
+4. Chạy lệnh PyInstaller:
+& "C:\Users\tanya\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\pyinstaller.exe" --onefile --windowed --uac-admin --icon="my_icon.ico" --name="TANetAI" --collect-data="matplotlib" --collect-data="fpdf2" --add-data="my_icon.ico;." --add-data="config.json;." --add-data="fonts;fonts" main.py

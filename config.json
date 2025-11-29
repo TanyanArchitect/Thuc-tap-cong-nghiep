@@ -1,0 +1,9 @@
+{
+  "training_packets": 3000,
+  "portscan_count": 40,
+  "portscan_window": 10,
+  "hostscan_count": 40,
+  "hostscan_window": 10,
+  "flood_count": 2000,
+  "flood_window": 2
+}
